@@ -6,6 +6,11 @@
         <title>JavaScript and DOM API</title>
         <link rel="stylesheet" type="text/css" href="css/game.css" media="all" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/game.js"></script>
+        <noscript>
+            Warning - JavaScript is disabled.
+            For full functionality of this page, it is necessary to enable JavaScript
+        </noscript>
         <script>
             // create global variable
             var bear;
@@ -21,7 +26,7 @@
             <p>Bear tries to avoid being stung by <input type="text" id="nbBees" value="1" size="3"> bees by running and jumping. The objective is to have as less stings as possible!</p>
             <p>You can adjust bees' speed <input type="text" id="speedBees" value="50" size="3"> px/ms
                 <br> and the refresh period <input type="text" id="periodTimer" value="10" size="3"> ms </p>
-            <p>You can adjust bears speed <input onchange="setSpeed()" type="text" id="speedBears" size="3"> px/ms </p>
+            <p>You can adjust bears speed <input onchange="setSpeed()" type="text" id="speedBears" value="100" size="3"> px/ms </p>
             <h2>Press left, right, up, down keys to move the bear</h2>
         </div>
         <div id="scores">
@@ -39,10 +44,5 @@
         <div id="board">
             <img src="./images/bear.gif" id="bear" alt="bear">
         </div>
-        <script src="js/game.js"></script>
-        <noscript>
-            Warning - JavaScript is disabled.
-            For full functionality of this page, it is necessary to enable JavaScript
-        </noscript>
     </body>
 </html>
