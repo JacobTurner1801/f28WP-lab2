@@ -103,7 +103,7 @@ function initLastStingTime() {
     lastStingTime = new Date();
 }
 
-
+// changed keycodes to wasd
 function moveBear(e) {
     // key codes
     const KEYUP = 87; // W
@@ -172,7 +172,7 @@ function addBee() {
     // when we create a bee, the beeNumber starts at 1, which when incremented, will always be the length of bees array 
     bees.push(new Bee(bees.length + 1));
     // add 1 to the value of the bees input field
-    document.getElementById("nbBees").value += 1;
+    document.getElementById("nbBees").value = bees.length;
 }
 
 function updateBees() {
@@ -185,7 +185,7 @@ function updateBees() {
     let currentStings = document.getElementById("hits").innerHTML;
     // gets a string, but we need a number
     currentStings = Number(currentStings);
-    if (currentStings == 1000) {
+    if (currentStings >= 1000) {
         // stop timer.
         alert("Game Over!");
         lastStingTime.clearTimeout();
