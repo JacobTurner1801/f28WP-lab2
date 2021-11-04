@@ -50,6 +50,7 @@ function isHit(defender, offender) {
         let score = hits.innerHTML;
         score = Number(score) + 1; //increment the score
         hits.innerHTML = score; //display the new score
+    } else {
         if (typeof(lastStingTime) !== 'undefined') {
             let newStingTime = new Date();
             let thisDuration = newStingTime - lastStingTime;
