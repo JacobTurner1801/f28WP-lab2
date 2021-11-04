@@ -50,19 +50,19 @@ function isHit(defender, offender) {
         let score = hits.innerHTML;
         score = Number(score) + 1; //increment the score
         hits.innerHTML = score; //display the new score
-    }
-    if (typeof(lastStingTime) !== 'undefined') {
-        let newStingTime = new Date();
-        let thisDuration = newStingTime - lastStingTime;
-        lastStingTime = Number(newStingTime);
-        let longestDuration = Number(document.getElementById("duration").innerHTML);
-        if (longestDuration === 0) {
-            longestDuration = thisDuration;
-        } else {
-            // gone past the longest duration by some amount of milliseconds
-            longestDuration += thisDuration;
+        if (typeof(lastStingTime) !== 'undefined') {
+            let newStingTime = new Date();
+            let thisDuration = newStingTime - lastStingTime;
+            lastStingTime = Number(newStingTime);
+            let longestDuration = Number(document.getElementById("duration").innerHTML);
+            if (longestDuration === 0) {
+                longestDuration = thisDuration;
+            } else {
+                // gone past the longest duration by some amount of milliseconds
+                longestDuration += thisDuration;
+            }
+            document.getElementById("duration").innerHTML = longestDuration;
         }
-        document.getElementById("duration").innerHTML = longestDuration;
     }
 }
 
